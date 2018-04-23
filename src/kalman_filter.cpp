@@ -62,7 +62,7 @@ VectorXd h(VectorXd predicted_state) {
 	}
 
 	double rho = sqrt(pow(px, 2) + pow(py, 2));
-	double phi = atan(py/px);
+	double phi = atan2(py,px);
 	double rho_dot = ((px * vx) + (py * vy))/rho;
 
 	projected_state[0] = rho;
